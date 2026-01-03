@@ -1,5 +1,7 @@
 # Valheim Server Status & Presentation Site
 
+LIVE PREVIEW: http://57.129.6.50/
+
 Un sito web moderno per visualizzare lo stato del tuo server Valheim e presentare la tua community. Include una dashboard con statistiche in tempo reale, una slideshow, e sezioni informative.
 
 ## Caratteristiche
