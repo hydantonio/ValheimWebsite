@@ -10,10 +10,19 @@ Un sito web moderno per visualizzare lo stato del tuo server Valheim e presentar
 - **Responsive**: Ottimizzato per desktop e mobile.
 - **API Backend**: Server Express.js leggero che interroga il server di gioco usando il protocollo Steam/Valve.
 
-## Prerequisiti
+---
 
-- [Node.js](https://nodejs.org/) (versione 14 o superiore)
-- Un server Valheim attivo (IP e porta Query)
+## ⚙️ Configurazione: Cambiare il Server Valheim
+
+Per monitorare un server diverso, devi modificare solo **un file**:
+
+1.  Apri il file `public/script.js` con un editor di testo (Notepad, VS Code, ecc.).
+2.  Trova la **prima riga** del file:
+    ```javascript
+    const SERVER_ADDRESS = '57.129.6.50:2457';
+    ```
+3.  Modifica l'IP e la Porta Query con i tuoi dati.
+    *   **Nota**: La porta Query è solitamente la porta di gioco + 1 (es. se la porta di gioco è 2456, la query port è 2457).
 
 ---
 
@@ -38,17 +47,7 @@ Questa guida ti permetterà di avviare il sito sul tuo PC locale o su un server 
         npm install
         ```
 
-4.  **Configura l'IP del Server**
-    *   Apri il file `server.js` con un editor di testo (Notepad, VS Code).
-    *   Trova la riga:
-        ```javascript
-        const SERVER_IP = '57.129.6.50'; // Tuo IP
-        const SERVER_PORT = 2457;        // Tua Porta Query
-        ```
-    *   Modifica con i tuoi dati se necessario.
-    *   Apri `public/script.js` e aggiorna `SERVER_ADDRESS` all'inizio del file per farlo corrispondere al tuo server (per la visualizzazione).
-
-5.  **Avvia il Sito**
+4.  **Avvia il Sito**
     *   Nel terminale, esegui:
         ```powershell
         node server.js
